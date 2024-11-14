@@ -6,7 +6,12 @@ public class Perro {
  
     public Perro(double peso) {
         // Que pasa en peso 0 o negativo
-        this.peso = peso;
+        if (peso > 0){
+            this.peso = peso;
+        } else {
+            // System.out.println("El peso indicado no es válido.");
+            throw new IllegalArgumentException("El peso no es válido. Debe se mayor que cero.");
+        }
     }
 
     public void comer(double pesoComida) {
