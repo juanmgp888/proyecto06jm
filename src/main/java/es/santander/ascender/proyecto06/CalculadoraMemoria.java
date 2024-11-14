@@ -52,18 +52,18 @@ public class CalculadoraMemoria {
 
         calculadora.setValorEntrada(5.1d);
         calculadora.restar();
-        System.out.println(calculadora.resultado);  // 39.9
+        System.out.println(calculadora.resultado);  // 39,9
         
         calculadora.setValorEntrada(2.76d); 
         calculadora.restar();
-        System.out.println(calculadora.resultado);  // 37.14
+        System.out.println(calculadora.resultado);  // 37,14
 
         calculadora.setValorEntrada(4.7d);
         calculadora.multiplicar();
-        System.out.println(calculadora.resultado);  // 
+        System.out.println(calculadora.resultado);  // 174,558
 
         calculadora.setValorEntrada(7d);
         calculadora.dividir();
-        System.out.println(calculadora.resultado);  // 
+        System.out.println(calculadora.resultado);  // 29,9368
     }
 }
