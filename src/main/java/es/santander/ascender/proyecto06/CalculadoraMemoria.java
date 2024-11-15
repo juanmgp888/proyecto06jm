@@ -2,12 +2,14 @@ package es.santander.ascender.proyecto06;
 
 public class CalculadoraMemoria {
     public double resultado;
-    public double memoria01 = 0.00d;
+    public double memoria01;
     private double valorEntrada;
 
     // Constructor
     public CalculadoraMemoria(double valorEntrada){
         this.valorEntrada = valorEntrada;
+        this.resultado = 0.00d;
+        this.memoria01 = 0.00d;
     }
 
     public double getValorEntrada() {
@@ -45,7 +47,10 @@ public class CalculadoraMemoria {
             return resultado;
         }
     }
-
+    public void resetear(){
+        this.memoria01 = 0.0d;
+        this.resultado = 0.0d;
+    }
     public static void main(String[] args) {
         // Llamada al constructor
         CalculadoraMemoria calculadora = new CalculadoraMemoria(0.00d);
@@ -61,5 +66,7 @@ public class CalculadoraMemoria {
         calculadora.multiplicar(4.7d);
 
         calculadora.dividir(7d);
+
+        calculadora.resetear();
     }
 }
