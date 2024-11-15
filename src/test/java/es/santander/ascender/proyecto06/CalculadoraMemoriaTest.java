@@ -12,7 +12,7 @@ public class CalculadoraMemoriaTest {
         CalculadoraMemoria calculadora = new CalculadoraMemoria(0.0);
 
         calculadora.setValorEntrada(45.0);
-        double resultadoSuma = calculadora.sumar();
+        double resultadoSuma = calculadora.sumar(45);
 
         assertEquals(45d, resultadoSuma, 0.00001);
     }
@@ -21,8 +21,8 @@ public class CalculadoraMemoriaTest {
         CalculadoraMemoria calculadora = new CalculadoraMemoria(0.0);
 
         calculadora.memoria01 = 45d;
-        calculadora.setValorEntrada(5.1d); 
-        double resultadoResta = calculadora.restar();
+      //  calculadora.setValorEntrada(5.1d); 
+        double resultadoResta = calculadora.restar(5.1d);
 
         assertEquals(39.9d, resultadoResta, 0.00001);
     }
@@ -31,8 +31,8 @@ public class CalculadoraMemoriaTest {
         CalculadoraMemoria calculadora = new CalculadoraMemoria(0.0);
 
         calculadora.memoria01 = 37.14;
-        calculadora.setValorEntrada(4.7d); 
-        double resultadoMultiplicacion = calculadora.multiplicar();
+       // calculadora.setValorEntrada(4.7d); 
+        double resultadoMultiplicacion = calculadora.multiplicar(4.7d);
 
         assertEquals(174.558d, resultadoMultiplicacion, 0.00001);
     }
@@ -41,9 +41,9 @@ public class CalculadoraMemoriaTest {
         CalculadoraMemoria calculadora = new CalculadoraMemoria(0.0);
 
         calculadora.memoria01 = 174.558d;
-        calculadora.setValorEntrada(7d); 
-        double resultadoDivision = calculadora.dividir();
+       // calculadora.setValorEntrada(7d); 
+        double resultadoDivision = calculadora.dividir(7d);
         
-        assertEquals(24.9368571, resultadoDivision, 0.00001);
+        assertEquals(24.936857143, resultadoDivision, 0.00001);
     }
 }
