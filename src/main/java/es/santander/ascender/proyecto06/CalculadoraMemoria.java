@@ -17,25 +17,33 @@ public class CalculadoraMemoria {
         this.valorEntrada = valorEntrada;
     }
 
-    public double sumar(){
+    public double sumar(double vEntrada){
+        this.valorEntrada = vEntrada;
         resultado = this.memoria01 + this.valorEntrada;
         this.memoria01 = resultado;
         return resultado;
     }
-    public double restar(){
+    public double restar(double vEntrada){
+        this.valorEntrada = vEntrada;
         resultado = this.memoria01 - this.valorEntrada;
         this.memoria01 = resultado;
         return resultado;
     }
-    public double multiplicar(){
+    public double multiplicar(double vEntrada){
+        this.valorEntrada = vEntrada;
         resultado = this.memoria01 * this.valorEntrada;
         this.memoria01 = resultado;
         return resultado;
     }
-    public double dividir(){
-        resultado = this.memoria01 / this.valorEntrada;
-        this.memoria01 = resultado;
-        return resultado;
+    public double dividir(double vEntrada){
+        this.valorEntrada = vEntrada;
+        if (vEntrada == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero.");
+        } else {
+            resultado = this.memoria01 / this.valorEntrada;
+            this.memoria01 = resultado;
+            return resultado;
+        }
     }
 
     public static void main(String[] args) {
@@ -47,23 +55,19 @@ public class CalculadoraMemoria {
         calculadora.setValorEntrada(45d);
         System.out.println(calculadora.getValorEntrada());  // Imprime: 45
 
-        calculadora.sumar();
+        calculadora.sumar(45d);
         System.out.println(calculadora.resultado);  // Imprime: 45
 
-        calculadora.setValorEntrada(5.1d);
-        calculadora.restar();
+        calculadora.restar(5.1d);
         System.out.println(calculadora.resultado);  // 39,9
-        
-        calculadora.setValorEntrada(2.76d); 
-        calculadora.restar();
+  
+        calculadora.restar(2.76d);
         System.out.println(calculadora.resultado);  // 37,14
 
-        calculadora.setValorEntrada(4.7d);
-        calculadora.multiplicar();
+        calculadora.multiplicar(4.7d);
         System.out.println(calculadora.resultado);  // 174,558
 
-        calculadora.setValorEntrada(7d);
-        calculadora.dividir();
-        System.out.println(calculadora.resultado);  // 29,9368
+        calculadora.dividir(7d);
+        System.out.println(calculadora.resultado);  // 24,936857143
     }
 }
