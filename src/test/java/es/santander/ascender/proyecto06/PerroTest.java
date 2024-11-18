@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+import es.santander.ascender.proyecto06jm.Perro;
+
 public class PerroTest {
     @Test
     void testComer() {
