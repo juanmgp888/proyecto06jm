@@ -48,4 +48,18 @@ public class CalculadoraMemoriaTest {
         
         assertEquals(24.936857143, resultadoDivision, 0.00001);
     }
+    @Test
+    public void testResetear() {
+
+        CalculadoraMemoria calculadora = new CalculadoraMemoria(0.0);
+
+        // Estado de la la memoria
+        calculadora.memoria01 = 24.936857143d;
+
+        calculadora.resetear();
+
+        // Verificar que después de resetear, memoria01 y resultado sean 0
+        assertEquals(0.0d, calculadora.memoria01, 0.00001);
+        assertEquals(0.0d, calculadora.resultado, 0.00001);
+    }
 }
