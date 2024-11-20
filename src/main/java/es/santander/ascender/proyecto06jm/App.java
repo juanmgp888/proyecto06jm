@@ -1,4 +1,4 @@
-package es.santander.ascender.proyecto06;
+package es.santander.ascender.proyecto06jm;
 
 /**
  * Hello world!
